@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddtodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/addtodo', function () {
+    return view('welcome');
 });
+// Route::get('user', 'UserController@index')->name('user');
+Route::get('/',[AddtodoController::class,'index'] );
+Route::post('/register',[AddtodoController::class,'add']);

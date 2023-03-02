@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  @stack('title')
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,4 +15,10 @@
 </style>
 </head>
 <body>
-    <header>
+    <nav class="nav justify-content-center  ">
+        <a class="nav-link" href="#">Home</a>
+      <a class="nav-link active" href="addtodo" aria-current="page">Add ToDo</a>
+      {{-- <a class="nav-link disabled" href="#"></a> --}}
+    </nav>
+    <div class="container">
+
